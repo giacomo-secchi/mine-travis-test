@@ -1,45 +1,28 @@
-# see http://about.travis-ci.org/docs/user/languages/php/ for more hints
 language: php
-
-# list any PHP version you want to test against
 php:
-  # using major version aliases
-
-  
-  # aliased to a recent 7.x version
-  - 7.0
-  # aliased to a recent hhvm version
-  - hhvm
-
-# optionally specify a list of environments, for example to test different RDBMS
+- 7.0
+- hhvm
 env:
-  - DB=mysql
-  - DB=pgsql
-
-# optionally set up exclusions and allowed failures in the matrix
+- DB=mysql
+- DB=pgsql
 matrix:
   exclude:
-    - php: hhvm
-      env: DB=pgsql  # PDO driver for pgsql is unsupported by HHVM (3rd party install for support)
+  - php: hhvm
+    env: DB=pgsql
   allow_failures:
-    - php: 7.0
-    - php: hhvm
-
-# execute any number of scripts before the test run, custom env's are available as variables
+  - php: 7.0
+  - php: hhvm
 before_script:
-  - if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS hello_world_test;" -U postgres; fi
-  - if [[ "$DB" == "pgsql" ]]; then psql -c "create database hello_world_test;" -U postgres; fi
-  - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS hello_world_test;" -uroot; fi
-
-# omitting "script:" will default to phpunit
-# use the $DB env variable to determine the phpunit.xml to use
+- if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS hello_world_test;"
+  -U postgres; fi
+- if [[ "$DB" == "pgsql" ]]; then psql -c "create database hello_world_test;" -U postgres;
+  fi
+- if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS hello_world_test;"
+  -uroot; fi
 script: phpunit --configuration phpunit_$DB.xml --coverage-text
-
-# configure notifications (email, IRC, campfire etc)
 notifications:
-  irc: "irc.freenode.org#yourfavouriteroomfortravis"
-
+  irc: irc.freenode.org#yourfavouriteroomfortravis
 deploy:
   provider: heroku
   api_key:
-    secure: "44df4ee5-5353-4af3-b77c-991289632e7c"
+    secure: bl565eoLutgJLt3iSlkPlfDf1aj07XLwCCmBMT0MyMXz9UVI0PjkkG1IWenzei940AG2LBo2I8Q6aKeK4uPpZn74QgFKzgu7IOu0+UYD6xoZAhIJOZcaGzxnFvPeSxhii0dEMQBKCXefEiTgxtZ+dMtTQezULr36emLkrpBNdsHOtqR4cTlFE8UXII2L/kHLZOGrOqGAK797Y7jVlzeKCLNBtAYN8J+8w7iWyLYF9RUbfLAUyHy1I+UzXMzvyt3rmmbapOe7xBjbluEfMH0/JNYb6GNQB8fLI/FuDHo7eebX5feEIn4KyirMaywHGd4HpAvLqRzL5BsmU4iW/GIR6Ai4bfJ/vbSm0Db0tFP6lqrABc5nBgx6CMD8dzLtZa+adCDYSiTNtU78ak5y79lT86RFUaXIM6VJEB3IrJAreG+fQL/jzQThrF/r3FqFi5zHm2bleHw1nBANT+1yBgjyJyc5TC1HyV5f2FUsVYy97yx//a1BR8TFxzIECZ+u1iw+PhdMG89yPVFIpl5m8idUix84k6C8rOEnTTXvHxZ7P7JIT3fN4P0nfR3eWysja96tOAtGWhK/pJMVkLVzVbpUTgGqnOIavZrgWaE94bPJHJJPRQ3eRxfpR9dl+1wDoDfhwmUjjG+X+0ILlPmNVizC+vgw1Or3NAHSjIHRjtSCld8=
