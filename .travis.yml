@@ -3,21 +3,3 @@ language: php
 services:
   - mysql
 
-addons:
-  chrome: stable
-  apt:
-    packages:
-      - dpkg
-      - apache2
-      - postfix
-      - libapache2-mod-fastcgi
-      - libappindicator1
-      - fonts-liberation
-
-os: linux
-dist: trusty
-
-php:
-  - 7.1
-  - 7.2
-  - 7.3
