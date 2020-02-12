@@ -3,8 +3,8 @@ php:
 - 7.0
 - hhvm
 env:
-- DB=mysql
-- DB=pgsql
+# - DB=mysql
+# - DB=pgsql
 matrix:
   exclude:
   - php: hhvm
