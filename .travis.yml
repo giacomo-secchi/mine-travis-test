@@ -2,9 +2,7 @@ language: php
 php:
 - 7.0
 - hhvm
-env:
-  # - DB=mysql
-  # - DB=pgsql
+env: 
 matrix:
   exclude:
   - php: hhvm
@@ -25,4 +23,4 @@ notifications:
 deploy:
   provider: heroku
   api_key:
-    secure: bl565eoLutgJLt3iSlkPlfDf1aj07XLwCCmBMT0MyMXz9UVI0PjkkG1IWenzei940AG2LBo2I8Q6aKeK4uPpZn74QgFKzgu7IOu0+UYD6xoZAhIJOZcaGzxnFvPeSxhii0dEMQBKCXefEiTgxtZ+dMtTQezULr36emLkrpBNdsHOtqR4cTlFE8UXII2L/kHLZOGrOqGAK797Y7jVlzeKCLNBtAYN8J+8w7iWyLYF9RUbfLAUyHy1I+UzXMzvyt3rmmbapOe7xBjbluEfMH0/JNYb6GNQB8fLI/FuDHo7eebX5feEIn4KyirMaywHGd4HpAvLqRzL5BsmU4iW/GIR6Ai4bfJ/vbSm0Db0tFP6lqrABc5nBgx6CMD8dzLtZa+adCDYSiTNtU78ak5y79lT86RFUaXIM6VJEB3IrJAreG+fQL/jzQThrF/r3FqFi5zHm2bleHw1nBANT+1yBgjyJyc5TC1HyV5f2FUsVYy97yx//a1BR8TFxzIECZ+u1iw+PhdMG89yPVFIpl5m8idUix84k6C8rOEnTTXvHxZ7P7JIT3fN4P0nfR3eWysja96tOAtGWhK/pJMVkLVzVbpUTgGqnOIavZrgWaE94bPJHJJPRQ3eRxfpR9dl+1wDoDfhwmUjjG+X+0ILlPmNVizC+vgw1Or3NAHSjIHRjtSCld8=
+    secure: F0V4+kz6tYLPoeUwOPhpGTOIAbL0ZRwl4JH34kbAVeLGHGjQ0WR2Nydu7/xM94RFdxTE983aGSImcdsmzGmjftjCleK3vzbIACN2YdAaXN6mWm/eg8XT9oYkbtKRyxipF8izC246jfL1mGXgu+IlA1ZHPaJzbcJfBdj7Eksz2B+KIIsRRu4AB6aJHE0+iIzDF+uHrOSGbOA+tb2tiDCCzNYeIutZU/i+K/n72o+eHdR22bgDFrckicbvOqC0wa7llrCLklQR/9ndJ0jJjehxvvnvoEYEsvVvYnlglcolyH+rRFZ0o6C5QFP75kx0GSG2lXFCqNdt/VGIYBHhVudNN/EJkFldTuX0cQRfjZyCTAxWSrx/6yxhRUdwfipegbhQmZj5LGOa7hDX2nt+jkKiYld77RTemjW1+8eFFyKckPQu+wfmKUReN1rsfcH0OKOKwtmsf16UNHe87ud4KK6ANKWgYb+bFJtvOu5dgQkasg7xWI98nhkxn3pBdDFjf4/aRhhPc7CsliFIqE3PkcIVWKs1EoJ2vJIRhh8G4XkmmDCTz60FjO6nlZWo1x8HnE89nOHlwk84G+YVlwNOCg0y4US8NCWqYKm7vPcrnl/duC0mnYJlIsFKiXcgTmf65hANYdBgE8YdUUdSd7BhYH8BCV/QDTjq61yMGODadR0jm34=
