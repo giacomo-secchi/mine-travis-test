@@ -11,8 +11,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: kx2s6Rx65iVcxpDq2WmOy7yaBf3gmzhqgwPKabUryY7HbAaFCcul3lTQatMCawrHVgc4EJHjTzdS5N3ELL9Zg9nUUOSzHGEHCDsgBpCNWroa5fMW88y4jyf+OTauwmIOuLwtavHSOW1iuKE/sNc3HJ5FI0f2ifJvFmWOS8DUhDWEMdL0VUS1NCm9m1cTDoRzyKDzFy0MMtUbWXagF3McEKV0Zam4YP9+3tHlKf19yDdmRGgDMCliAXFNJeHutBsir8k4Ys30EO7HyG6RywLonZXqOxQKJon4MCr182xYR+ew3TOcytmuxSyY1jIftqZlTv74K92t6VyQf5mcgUqBNq/wTWv0cdgob75KBmewtR0P2SMpVBYFtyT/k2zABf2FWM8ALQXvfGLrKNiXd65R68QgaJEfaWJUMpi664Bqo8GwwWqq3iy5uhoRMdJjWYd4H7WF17O/SZCfC2e74IcOqEHvjg2/yWw/uaGZ3Y3N/l1eWAXyhYE7/dqopCSFcnNJ8qYNdaGqe6SndCk9Pda/pWE9b8cmZEPLLgpywUTtL9T3/QYxE+2eSk6WsEN69eVp28e3bZgmQWFc8cXXI00cSX3O8+P+ohQuxISR15bPPgldaP5zGm53YeIXmB8KWnxSxTvw+5dWKxlWfaKFZKCHAEmFM8pRvDA2qV9cJPs8myk=
-  app: automate-heorku
+    secure: $TEST 
   app: mine-travis-test
   on:
     repo: giacomo-secchi/mine-travis-test
