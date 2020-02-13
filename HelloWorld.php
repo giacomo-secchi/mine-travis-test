@@ -2,7 +2,7 @@
 
 class HelloWorld
 {
-    /**
+    /**ddd
      * @var PDO
      */
     private $pdo;
