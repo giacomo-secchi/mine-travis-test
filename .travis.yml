@@ -24,3 +24,6 @@ deploy:
   provider: heroku
   api_key:
     secure: F0V4+kz6tYLPoeUwOPhpGTOIAbL0ZRwl4JH34kbAVeLGHGjQ0WR2Nydu7/xM94RFdxTE983aGSImcdsmzGmjftjCleK3vzbIACN2YdAaXN6mWm/eg8XT9oYkbtKRyxipF8izC246jfL1mGXgu+IlA1ZHPaJzbcJfBdj7Eksz2B+KIIsRRu4AB6aJHE0+iIzDF+uHrOSGbOA+tb2tiDCCzNYeIutZU/i+K/n72o+eHdR22bgDFrckicbvOqC0wa7llrCLklQR/9ndJ0jJjehxvvnvoEYEsvVvYnlglcolyH+rRFZ0o6C5QFP75kx0GSG2lXFCqNdt/VGIYBHhVudNN/EJkFldTuX0cQRfjZyCTAxWSrx/6yxhRUdwfipegbhQmZj5LGOa7hDX2nt+jkKiYld77RTemjW1+8eFFyKckPQu+wfmKUReN1rsfcH0OKOKwtmsf16UNHe87ud4KK6ANKWgYb+bFJtvOu5dgQkasg7xWI98nhkxn3pBdDFjf4/aRhhPc7CsliFIqE3PkcIVWKs1EoJ2vJIRhh8G4XkmmDCTz60FjO6nlZWo1x8HnE89nOHlwk84G+YVlwNOCg0y4US8NCWqYKm7vPcrnl/duC0mnYJlIsFKiXcgTmf65hANYdBgE8YdUUdSd7BhYH8BCV/QDTjq61yMGODadR0jm34=
+  app: mine-travis-test
+  on: 
+    repo: giacomo-secchi/mine-travis-test
