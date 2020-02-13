@@ -1,0 +1,29 @@
+language: php
+php:
+- 7.0
+- hhvm
+env: 
+matrix:
+  exclude:
+  - php: hhvm
+    env: DB=pgsql
+  allow_failures:
+  - php: 7.0
+  - php: hhvm
+before_script:
+- if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS hello_world_test;"
+  -U postgres; fi
+- if [[ "$DB" == "pgsql" ]]; then psql -c "create database hello_world_test;" -U postgres;
+  fi
+- if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS hello_world_test;"
+  -uroot; fi
+script: phpunit --configuration phpunit_$DB.xml --coverage-text
+notifications:
+  irc: irc.freenode.org#yourfavouriteroomfortravis
+deploy:
+  provider: heroku
+  api_key:
+    secure: 44df4ee5-5353-4af3-b77c-991289632e7c
+  app: mine-travis-test
+  on:
+    repo: giacomo-secchi/mine-travis-test
