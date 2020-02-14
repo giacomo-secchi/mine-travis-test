@@ -12,7 +12,7 @@ deploy:
   provider: heroku
   api_key:
     secure: $TEST
-  app: mine-travis-test
+  app: mine-travis-test2
   on:
     repo: giacomo-secchi/mine-travis-test
     all_branches: true
